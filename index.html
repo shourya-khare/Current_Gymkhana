@@ -267,11 +267,8 @@ function changeClass() {
                       <ul class="form-details">
                         <li ><a class="Active form" href="https://docs.google.com/forms/d/e/1FAIpQLSejC3ApFM_cj8Kao4BHhT_NyXNjBe59WEo74McwXgNzEjr_wg/closedform">Application Form Active</a></li>
                         <li class="Expired form" >Application Form Expired</li>
+                        <li class="NotReleased form">Application not released</li>
                       </ul>
-                      <!-- <ul>
-                        <li class="RActive form" >Recruitment task form Active</a></li>
-                        <li class="RExpired form" >Recruitment task form Expired</li>
-                      </ul> -->
                   </div>
                   <style>
                     .form-details{
@@ -299,17 +296,26 @@ function changeClass() {
                     .Expired {
                       background-color: rgb(255, 1, 1);
                     }
-                   
+                   .NotReleased {
+                    background-color: purple;
+                   }
                   </style>
                   <script>
-                    var formStatus=1;
+                    var formStatus=2;
                     if(formStatus===1)
                     {
                       document.querySelector(".Expired").hidden=true;
+                      document.querySelector(".NotReleased").hidden=true;
+                    }
+                    else if(formStatus===0)
+                    {
+                      document.querySelector(".Active").hidden=true;
+                      document.querySelector(".NotReleased").hidden=true;
                     }
                     else
                     {
                       document.querySelector(".Active").hidden=true;
+                      document.querySelector(".Expired").hidden=true;
                     }
                    </script>
                   
@@ -366,7 +372,60 @@ function changeClass() {
                   <div class="col-10" style="padding-left:30px; padding-top :15px;">
                       <h4 class="h4">Science and Technology  (SnT) Council</h4>
                       <p style="font-size:14px;" class="text-muted">The SnT Council of IIT Kanpur is a community of science and technology enthusiasts who love to explore the unthinkable.</p>
+                      <ul class="form-details">
+                        <li ><a class="ActiveSnt form" href="https://docs.google.com/forms/d/e/1FAIpQLSejC3ApFM_cj8Kao4BHhT_NyXNjBe59WEo74McwXgNzEjr_wg/closedform">Application Form Active</a></li>
+                        <li class="ExpiredSnt form" >Application Form Expired</li>
+                        <li class="NotReleasedSnt form">Application not released</li>
+                      </ul>
                   </div>
+                  <style>
+                    .form-details{
+                      display: flex;
+                      list-style: none;
+                      justify-content: space-between;
+
+                    }
+                    .form{
+                      padding: 5px;
+                      text-align: center;
+                      color: white;
+                      text-decoration: none;
+                      border-radius: 5px;
+                    }
+
+                    .form-details a:hover{
+                      background-color: blue;
+                      text-decoration: none;
+                      color:white;
+                    }
+                    .ActiveSnt {
+                      background-color: rgb(0, 203, 0);
+                    }
+                    .ExpiredSnt {
+                      background-color: rgb(255, 1, 1);
+                    }
+                   .NotReleasedSnt {
+                    background-color: purple;
+                   }
+                  </style>
+                  <script>
+                    var formStatus=2;
+                    if(formStatus===1)
+                    {
+                      document.querySelector(".ExpiredSnt").hidden=true;
+                      document.querySelector(".NotReleasedSnt").hidden=true;
+                    }
+                    else if(formStatus===0)
+                    {
+                      document.querySelector(".ActiveSnt").hidden=true;
+                      document.querySelector(".NotReleasedSnt").hidden=true;
+                    }
+                    else
+                    {
+                      document.querySelector(".ActiveSnt").hidden=true;
+                      document.querySelector(".ExpiredSnt").hidden=true;
+                    }
+                   </script>
                 </div>
               
            
