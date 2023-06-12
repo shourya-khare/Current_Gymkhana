@@ -265,13 +265,13 @@ function changeClass() {
                       <h4 class="h4">Academics and Career (AnC) Council</h4>
                       <p style="font-size:14px;" class="text-muted">AnC Council has been trusted with the responsibility of managing executive activities in two of the most crucial aspects of student life - Academics and Career. </p>
                       <ul class="form-details">
-                        <li class="Active form">Application Form Active</li>
-                        <li class="Expired form">Application Form Expired</li>
+                        <li ><a class="Active form" href="https://docs.google.com/forms/d/e/1FAIpQLSejC3ApFM_cj8Kao4BHhT_NyXNjBe59WEo74McwXgNzEjr_wg/closedform">Application Form Active</a></li>
+                        <li class="Expired form" >Application Form Expired</li>
                       </ul>
-                      <ul>
-                        <li class="Active Rform">Recruitment task form Active</li>
-                        <li class="Expired Rform">Recruitment task form Expired</li>
-                      </ul>
+                      <!-- <ul>
+                        <li class="RActive form" >Recruitment task form Active</a></li>
+                        <li class="RExpired form" >Recruitment task form Expired</li>
+                      </ul> -->
                   </div>
                   <style>
                     .form-details{
@@ -281,18 +281,25 @@ function changeClass() {
 
                     }
                     .form{
-                      height: 25px;
-                      width: 230px;
+                      padding: 5px;
                       text-align: center;
                       color: white;
+                      text-decoration: none;
+                      border-radius: 5px;
                     }
 
-                    .Active{
+                    .form-details a:hover{
+                      background-color: blue;
+                      text-decoration: none;
+                      color:white;
+                    }
+                    .Active {
                       background-color: rgb(0, 203, 0);
                     }
-                    .Expired{
+                    .Expired {
                       background-color: rgb(255, 1, 1);
                     }
+                   
                   </style>
                   <script>
                     var formStatus=1;
@@ -304,13 +311,7 @@ function changeClass() {
                     {
                       document.querySelector(".Active").hidden=true;
                     }
-
-                    var recformstatus=1;
-                    if(recformstatus===1)
-                    {
-
-                    }
-                  </script>
+                   </script>
                   
                 </div>
               
